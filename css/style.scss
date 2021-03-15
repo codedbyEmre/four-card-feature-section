@@ -1,0 +1,153 @@
+@import 'configs';
+
+*{
+    box-sizing: border-box;
+    font-family: $fontStack;
+}
+
+body{
+    margin: 0;
+    overflow-x: hidden;
+    font-size: 15px;
+    background-color: $VeryLightGray;
+}
+
+%container{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3rem 2rem 0rem;
+}
+
+header{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    color: $VeryDarkBlue;
+    .container{
+        @extend %container;
+        .header-top{
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h2{
+                font-size: 2.25rem;
+                font-weight: 200;
+                margin-bottom: 0;
+            }
+            h1{
+                margin-top: 0;
+                font-size: 2.25rem;
+                margin-bottom: 0;
+            }
+            p{
+                margin-top: 1rem;
+                font-size: 1rem;
+                width: 35rem;
+                color: $GrayishBlue;
+                line-height: 1.5;
+            }
+        }
+        .header-body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 3rem;
+            .card{
+                position: relative;
+                margin: 2rem;
+                border-radius: 6px;
+                height: 16rem;
+                width: 22.5rem;
+                padding: 2rem;
+                background-color: #fff;
+                color: $VeryDarkBlue;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                box-shadow: 0 12px 30px hsl(227, 53%, 90%);
+                h3{
+                    margin-top: 0;
+                    font-size: 1.25rem;
+                    margin-bottom: 0.75rem;
+                }
+                p{
+                    margin-top: 0;
+                    font-size: 0.9rem;
+                    color: $GrayishBlue;
+                }
+                img{
+                    position: absolute;
+                    bottom: 2rem;
+                    right: 2rem;
+                }
+                &:nth-of-type(1){
+                    border-top: 5px solid $Cyan;
+                    transform: translate(-50%, 50%);
+                }
+                &:nth-of-type(2){
+                    border-top: 5px solid $Red;
+                    transform: translate(-55%, -10%);
+                }
+                &:nth-of-type(3){
+                    border-top: 5px solid $Orange;
+                    transform: translate(63%, -20%);
+                }
+                &:nth-of-type(4){
+                    border-top: 5px solid $Blue;
+                    transform: translate(57%, -75%);
+                }
+            }
+        }
+    }
+    
+}
+
+footer{
+    padding: 1rem;
+    text-align: center;
+}
+
+@media(max-width: 1200px){
+    header{
+        .container{
+            margin-bottom: 4rem;
+            .header-top{
+                h2{
+                    font-size: 2rem;
+                }
+                h1{
+                    font-size: 2rem;
+                }
+                p{
+                    font-size: 0.95rem;
+                    width: 100%;
+                }
+            }
+            .header-body{
+                .card{
+                    position: relative;
+                    margin: 1rem;
+                    border-radius: 6px;
+                    height: 16rem;
+                    width: 100%;
+                    padding: 2rem;
+                    &:nth-of-type(1){
+                        transform: translate(0%, 0%);
+                    }
+                    &:nth-of-type(2){
+                        transform: translate(0%, 0%);
+                    }
+                    &:nth-of-type(3){
+                        transform: translate(0%, 0%);
+                    }
+                    &:nth-of-type(4){
+                        transform: translate(0%, 0%);
+                    }
+                }
+            }
+        }
+        
+    }
+}
